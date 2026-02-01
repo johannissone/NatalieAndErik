@@ -1,0 +1,534 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f7f6;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+.topnav {
+    width: 100%;
+    padding: 20px 50px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.nav-links a {
+    padding: 30px 15px;
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #d4a373;
+    background: #f0edea;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("../img/3.jpg") center 63% /cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+    /* offset for navbar */
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    letter-spacing: 12px;
+    color: white;
+}
+
+.hero-content p {
+    color: white;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+}
+
+.date {
+    margin-top: 15px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* SECTIONS */
+.section {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section p {
+    font-size: 17px;
+    color: #555;
+}
+
+/* GRID FOR DETAILS & HOTELS */
+.details-grid {
+    margin-top: 40px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.details-grid h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.details-intro {
+    grid-column: 1 / -1;
+    /* span full width */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: -20px;
+    /* pulls them closer together */
+}
+
+.venue-box {
+    grid-column: 1 / -1;
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    padding: 30px 25px;
+    /* down from 35px */
+    margin-top: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.venue-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.venue-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.detail-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detail-card h3 {
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.detail-card h4 {
+    margin-bottom: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #777;
+}
+
+.detail-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 10px;
+}
+
+.detail-card p:first-of-type {
+    margin-top: 14px;
+}
+
+.schedule-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.schedule-list li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.schedule-list li span {
+    min-width: 60px;
+    font-weight: 600;
+    color: #d4a373;
+    /* your accent color */
+}
+
+/* RSVP */
+.rsvp {
+    padding-bottom: 120px;
+}
+
+.rsvp-button {
+    display: inline-block;
+    margin-top: 25px;
+    background: #d4a373;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.rsvp-button:hover {
+    background: #b88555;
+}
+
+/* GALLERY GRID */
+#gallery.section {
+    max-width: 1400px;
+    /* wider gallery */
+    width: 80%;
+    /* fill more of the screen */
+}
+
+.gallery-grid {
+    margin-top: 5px;
+    display: grid;
+    gap: 15px;
+    /* Automatically make columns depending on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.gallery-grid img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    /* crops nicely */
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* --- THE CREW SECTION --- */
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+    align-items: start;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.crew-member {
+    max-width: 360px;
+    text-align: center;
+}
+
+.crew-member img {
+    height: 320px;
+    width: 320px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.crew-member h3 {
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.crew-member .role {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.crew-member .bio {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #555;
+}
+
+.clickable-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #d4a373;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.clickable-link:hover {
+    background: #c08d5f;
+}
+
+/* COUNTDOWN SECTION */
+.countdown-section {
+    margin-top: 80px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.countdown-timer div {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    text-align: center;
+    min-width: 90px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.countdown-timer span {
+    font-size: 32px;
+    font-weight: 600;
+    display: block;
+    font-family: "Playfair Display", serif;
+    color: #d4a373;
+    /* Your highlight color */
+}
+
+.countdown-timer small {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+/* RSVP SECTION */
+.rsvp-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.rsvp-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #2a2a2a;
+}
+
+.rsvp-subtitle {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Elegant frame around Google Form */
+.rsvp-frame {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px 20px 20px 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(212, 163, 115, 0.4);
+    /* soft gold border */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Make iframe resize nicely */
+.rsvp-frame iframe {
+    width: 100%;
+    height: 900px;
+    /* adjust based on form length */
+    border: none;
+    border-radius: 12px;
+}
+
+/* Combined info split card */
+.combined-info-card {
+    grid-column: 1 / -1;
+}
+
+.combined-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.combined-col h3 {
+    margin-bottom: 12px;
+}
+
+.combined-col p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ----------------------------- */
+/* MOBILE FIXES */
+/* ----------------------------- */
+@media (max-width: 768px) {
+    .details-intro {
+        margin-bottom: 12px;
+    }
+
+    .details-intro:last-child {
+        margin-bottom: 0;
+    }
+
+    /* NAV: make it breathable + wrap nicely */
+    .topnav {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    html {
+        scroll-padding-top: 145px;
+        /* adjust if needed */
+    }
+
+    .logo {
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 10px;
+    }
+
+    .nav-links a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    /* HERO: make headline fit */
+    .hero-content h1 {
+        font-size: 36px;
+        letter-spacing: 6px;
+        padding: 0 10px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    /* SECTIONS: reduce huge desktop margins */
+    .section {
+        margin: 70px auto;
+        padding: 0 16px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    /* COUNTDOWN: allow wrap instead of squeezing */
+    .countdown-timer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .countdown-timer div {
+        min-width: 120px;
+        padding: 14px 16px;
+    }
+
+    /* DETAILS GRID: slightly tighter spacing */
+    .details-grid {
+        gap: 18px;
+    }
+
+    /* GALLERY: your imgs have fixed width/height — make them fluid on mobile */
+    .gallery-grid img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        /* keeps square feel */
+    }
+
+    /* CREW: images should be responsive */
+    .crew-member img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
