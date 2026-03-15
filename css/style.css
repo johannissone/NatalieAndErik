@@ -6,8 +6,8 @@
     --accent: #C1521E;
     --bigtext: #C1521E;
     --smalltext: #C1521E;
-    --gettingmarriedtexts: #C1521E;
-    --natalieerik: #C1521E;
+    --gettingmarriedtexts: #ffffff;
+    --natalieerik: #ffffff;
 }
 
 * {
@@ -19,7 +19,7 @@
 /* HERO */
 .hero {
     height: 100vh;
-    background: url("../img/banner11.png") center 63% /cover no-repeat;
+    background: url("../img/banner13.png") center 63% /cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
