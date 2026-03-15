@@ -1,8 +1,31 @@
 /* GLOBAL */
+
+:root {
+    --page-bg: #f9f7f6;
+    --card-bg: #ffffff;
+    --accent: #d4a373;
+    --bigtext: #444;
+    --smalltext: #444;
+    --gettingmarriedtexts: #982551;
+    --natalieerik: #982551;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("../img/banner10.png") center 63% /cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+    /* offset for navbar */
 }
 
 html {
@@ -12,8 +35,8 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #f9f7f6;
-    color: #444;
+    background: var(--card-bg);
+    color: var(--bigtext);
     line-height: 1.7;
 }
 
@@ -42,38 +65,26 @@ body {
 .nav-links a {
     padding: 30px 15px;
     text-decoration: none;
-    color: #444;
+    color: var(--smalltext);
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #d4a373;
-    background: #f0edea;
-}
-
-/* HERO */
-.hero {
-    height: 100vh;
-    background: url("../img/3.jpg") center 63% /cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 80px;
-    /* offset for navbar */
+    color: var(--accent);
+    background: var(--page-bg);
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 64px;
     letter-spacing: 12px;
-    color: white;
+    color: var(--natalieerik);
 }
 
 .hero-content p {
-    color: white;
+    color: var(--gettingmarriedtexts);
 }
 
 .subtitle {
