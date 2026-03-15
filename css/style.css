@@ -449,6 +449,10 @@ body {
         margin-bottom: 12px;
     }
 
+    body {
+        padding-top: 70px;
+    }
+
     .details-intro:last-child {
         margin-bottom: 0;
     }
