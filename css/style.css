@@ -1,13 +1,13 @@
 /* GLOBAL */
 
 :root {
-    --page-bg: #f9f7f6;
+    --page-bg: #cdd0db;
     --card-bg: #ffffff;
-    --accent: #d4a373;
-    --bigtext: #444;
-    --smalltext: #444;
-    --gettingmarriedtexts: #982551;
-    --natalieerik: #982551;
+    --accent: #C1521E;
+    --bigtext: #C1521E;
+    --smalltext: #C1521E;
+    --gettingmarriedtexts: #C1521E;
+    --natalieerik: #C1521E;
 }
 
 * {
@@ -19,7 +19,7 @@
 /* HERO */
 .hero {
     height: 100vh;
-    background: url("../img/banner9.png") center 63% /cover no-repeat;
+    background: url("../img/banner11.png") center 63% /cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
