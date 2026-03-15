@@ -490,13 +490,13 @@ body {
 
     /* HERO: make headline fit */
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 45px;
         letter-spacing: 6px;
         padding: 0 10px;
     }
 
     .subtitle {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     .date {
@@ -513,6 +513,9 @@ body {
         font-size: 28px;
     }
 
+.section p {
+    font-size: 15px;
+}
     /* COUNTDOWN: allow wrap instead of squeezing */
     .countdown-timer {
         flex-wrap: wrap;
