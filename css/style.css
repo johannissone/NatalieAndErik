@@ -121,7 +121,12 @@ body {
     color: #4D5937;
 }
 
-
+.section h3 {
+    font-family: 'Imbue', serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #EF5356;
+}
 
 .section p {
     font-size: 17px;
